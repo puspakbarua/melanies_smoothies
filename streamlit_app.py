@@ -22,8 +22,9 @@ ingredients_list = st.multiselect(
     , my_dataframe
     , max_selections=5
 )
+
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+st.text(smoothiefroot_response.json())
 
 if ingredients_list:
     
